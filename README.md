@@ -13,3 +13,4 @@
    ```bash
    git clone [https://github.com/akreshchenko2027-coder/artemkreshchenko.git](https://github.com/akreshchenko2027-coder/artemkreshchenko.git)
    cd artemkreshchenko
+   # Stage 1 Completed
