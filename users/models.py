@@ -13,5 +13,20 @@ class User(AbstractUser):
         default=Role.STUDENT
     )
 
+    groups = models.ManyToManyField(
+        'auth.Group',
+        verbose_name='groups',
+        blank=True,
+        related_name='custom_user_set',
+        related_query_name='custom_user',
+    )
+    user_permissions = models.ManyToManyField(
+        'auth.Permission',
+        verbose_name='user permissions',
+        blank=True,
+        related_name='custom_user_permissions_set',
+        related_query_name='custom_user_permission',
+    )
+
     def __str__(self):
         return f"{self.username} ({self.role})"
